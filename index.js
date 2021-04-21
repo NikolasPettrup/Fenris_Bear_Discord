@@ -88,6 +88,13 @@ client.on("message", function (message) {
             }
             break;
         
+        //DestinyV Command
+        case ['destiny', 'dv', 'd5', 'destinyv', 'destiny5'].find((value, index, arr) => command == value):
+            message.delete();
+            message.channel.send('DestinyV is a German GTA V Roleplay server project by Grizzley and two of his friends which currently is in development. Discord-Server: https://discord.gg/URkNCPJeWe');
+            message.channel.send(':flag_de: Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglieder der Projektleitung eine DM.');
+            break;
+
         //Join Command.
         case 'join':
             message.delete();
@@ -100,7 +107,7 @@ client.on("message", function (message) {
         //Commands
         case ['command', 'commands', 'cmd', 'cmds', 'help'].find((value, index, arr) => command === value):
             message.delete();
-            message.channel.send('<@' + message.author + '> These are the commands I can operate: ```!twitter - Sends a link to Grizzley\'s Twitter-Account\n!insta - Sends a link to Grizzley\'s Instagram-Account\n!fiverr - Sends a Link to Grizzley\'s Fiverr-Account\n!twitch - Sends a Link to Grizzley\'s Twitch-Account\n!8ball [Your yes-no-question] - Gives an answer for your question\n!help - Shows this reply\n\nMore commands coming in the future.```');
+            message.channel.send('<@' + message.author + '> These are the commands I can operate: ```!d5 - Sends information about our GTA V RP Server project DestinyV\n!twitter - Sends a link to Grizzley\'s Twitter-Account\n!insta - Sends a link to Grizzley\'s Instagram-Account\n!fiverr - Sends a Link to Grizzley\'s Fiverr-Account\n!twitch - Sends a Link to Grizzley\'s Twitch-Account\n!8ball [Your yes-no-question] - Gives an answer for your question\n!help - Shows this reply\n\nMore commands coming in the future.```');
             break;
 
     }
