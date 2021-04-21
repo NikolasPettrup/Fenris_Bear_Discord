@@ -92,7 +92,7 @@ client.on("message", function (message) {
         case ['destiny', 'dv', 'd5', 'destinyv', 'destiny5'].find((value, index, arr) => command == value):
             message.delete();
             message.channel.send('DestinyV is a German GTA V Roleplay server project by Grizzley and two of his friends which currently is in development. Discord-Server: https://discord.gg/URkNCPJeWe');
-            message.channel.send(':flag_de: Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglieder der Projektleitung eine DM.');
+            message.channel.send(':flag_de: Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglied der Projektleitung eine DM.');
             break;
 
         //Join Command.
