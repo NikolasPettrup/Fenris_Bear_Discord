@@ -47,74 +47,73 @@ client.on("message", function (message) {
     }*/
 
     switch (command) {
-        //Twitter
+        //Commands
+        case ['command', 'commands', 'cmd', 'cmds', 'help'].find((value, index, arr) => command === value):
+            message.delete();
+            message.channel.send('<@' + message.author + '> These are the commands I can operate: ```!d5 - Sends information about our GTA V RP Server project DestinyV\n!twitter - Sends a link to Grizzley\'s Twitter-Account\n!insta - Sends a link to Grizzley\'s Instagram-Account\n!fiverr - Sends a Link to Grizzley\'s Fiverr-Account\n!twitch - Sends a Link to Grizzley\'s Twitch-Account\n!8ball [Your yes-no-question] - Gives an answer for your question\n!help - Shows this reply\n !grogu - Saves Baby Yoda everytime you use this command \n\nMore commands coming in the future.```');
+            break;
+
+            //Twitter
         case 'twitter':
             message.delete();
             message.channel.send('It seems like you\'d like to follow Grizzley on Twitter: https://twitter.com/grizzIeylol');
             break;
-        //Instagram
+            //Instagram
         case ['insta', 'instagram', 'ig'].find((value, index, arr) => command === value):
             message.delete();
             message.channel.send('It seems like you\'d like to follow Grizzley on Instagram: https://instagram.com/grizzIeylol');
             break;
-        //Fiverr
+            //Fiverr
         case ['fiverr', 'gig', 'emotes', 'logo', 'emote', 'logos', 'badge', 'badges'].find((value, index, arr) => command === value):
             message.delete();
             message.channel.send('In need of emotes, badges or a logo for your Twitch, Youtube or Social Media Account? Check out Grizzleys Gigs on Fiverr: https://www.fiverr.com/kenowby');
             break;
-        //Twitch
+            //Twitch
         case 'twitch':
             message.delete();
             message.channel.send('It seems like you\'d like to watch and follow Grizzley on Twitch: https://twitch.tv/thegrizziey');
             break;
-        //Steam
+            //Steam
         case 'steam':
             message.delete();
             message.channel.send('It seems like you\'d like to add Grizzley on Steam: https://steamcommunity.com/id/thegrizziey/');
             break;
-        //8 Ball
+            //8 Ball
         case '8ball':
             const randomMessage = eightball[Math.floor(Math.random() * eightball.length)];
             if (args.length >= 1 && args[0] != '') {
                 message.channel.send('<@' + message.author + '>```' + randomMessage + '```');
-            }
-            else {
+            } else {
                 message.channel.send('<@' + message.author + '>```If there is no question, there is no answer.```');
             }
             break;
-        // Poke-Command.
+            // Poke-Command.
         case 'poke':
             if (args.length > 0) {
-                message.channel.send('Yo, ' + args[0]+ '! *poke* *poke* Lemme poke you! *poke* *poke* @<' + message.author + '> wants me to do dis.');
+                message.channel.send('Yo, ' + args[0] + '! *poke* *poke* Lemme poke you! *poke* *poke* @<' + message.author + '> wants me to do dis.');
             }
             break;
-        
-        //DestinyV Command
+
+            //DestinyV Command
         case ['destiny', 'dv', 'd5', 'destinyv', 'destiny5'].find((value, index, arr) => command == value):
             message.delete();
             message.channel.send('DestinyV is a German GTA V Roleplay server project by Grizzley and two of his friends which currently is in development. Discord-Server: https://discord.gg/URkNCPJeWe');
             message.channel.send(':flag_de: Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglied der Projektleitung eine DM.');
             break;
 
-        //Join Command.
+            //Join Command.
         case 'join':
             message.delete();
             let member = message.member;
             member.roles.add('787692725490286604').catch(console.error);
             message.author.send('```*clap clap* You\'re now a member of Grizzley\'s Bounty Hunter Guild!```');
             break;
-        
-        //Grogu Counter
+
+            //Grogu Counter
         case 'grogu':
             message.delete();
             i++;
-            message.channel.send('@<' + message.author + '> \n Grogu was in trouble again, but you saved him! Baby Yoda was already saved ' + i + ' times by this Discord server!');
-            break;
-
-        //Commands
-        case ['command', 'commands', 'cmd', 'cmds', 'help'].find((value, index, arr) => command === value):
-            message.delete();
-            message.channel.send('<@' + message.author + '> These are the commands I can operate: ```!d5 - Sends information about our GTA V RP Server project DestinyV\n!twitter - Sends a link to Grizzley\'s Twitter-Account\n!insta - Sends a link to Grizzley\'s Instagram-Account\n!fiverr - Sends a Link to Grizzley\'s Fiverr-Account\n!twitch - Sends a Link to Grizzley\'s Twitch-Account\n!8ball [Your yes-no-question] - Gives an answer for your question\n!help - Shows this reply\n\nMore commands coming in the future.```');
+            message.channel.send('<@' + message.author + '> \n Grogu was in trouble again, but you saved him! Baby Yoda was already saved ' + i + ' times by this Discord server!');
             break;
 
     }
