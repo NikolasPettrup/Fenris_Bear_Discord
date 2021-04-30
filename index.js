@@ -18,6 +18,7 @@ require('dotenv').config({
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
+var i = 0;
 
 client.on("ready", () => {
     logAll('Fenris_Bear Discord Bot is now online!');
@@ -102,7 +103,13 @@ client.on("message", function (message) {
             member.roles.add('787692725490286604').catch(console.error);
             message.author.send('```*clap clap* You\'re now a member of Grizzley\'s Bounty Hunter Guild!```');
             break;
-
+        
+        //Grogu Counter
+        case 'grogu':
+            message.delete();
+            i++;
+            message.channel.send('Grogu was in trouble again, but you saved him, @<' + message.author + '>! Baby Yoda was already saved ' + i + ' times by this Discord server!');
+            break;
 
         //Commands
         case ['command', 'commands', 'cmd', 'cmds', 'help'].find((value, index, arr) => command === value):
