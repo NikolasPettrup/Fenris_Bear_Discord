@@ -108,7 +108,7 @@ client.on("message", function (message) {
         case 'grogu':
             message.delete();
             i++;
-            message.channel.send('Grogu was in trouble again, but you saved him, @<' + message.author + '>! Baby Yoda was already saved ' + i + ' times by this Discord server!');
+            message.channel.send('@<' + message.author + '> \n Grogu was in trouble again, but you saved him! Baby Yoda was already saved ' + i + ' times by this Discord server!');
             break;
 
         //Commands
