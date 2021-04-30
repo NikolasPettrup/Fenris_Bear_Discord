@@ -18,7 +18,7 @@ require('dotenv').config({
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
-var grogu = 0;
+var i = 0;
 
 client.on("ready", () => {
     logAll('Fenris_Bear Discord Bot is now online!');
@@ -107,8 +107,8 @@ client.on("message", function (message) {
         //Grogu Counter
         case 'grogu':
             message.delete();
-            grogu++;
-            message.channel.send('Grogu was in trouble again, but you saved him, @<' + message.author + '>! Baby Yoda was already saved ' + grogu + ' times by this Discord server!');
+            i++;
+            message.channel.send('Grogu was in trouble again, but you saved him, @<' + message.author + '>! Baby Yoda was already saved ' + i + ' times by this Discord server!');
             break;
 
         //Commands
