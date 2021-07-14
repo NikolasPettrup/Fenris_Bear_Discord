@@ -116,6 +116,12 @@ client.on("message", function (message) {
             message.channel.send('<@' + message.author + '> \n Grogu was in trouble again, but you saved him! Baby Yoda was already saved ' + i + ' times by this Discord server!');
             break;
 
+        //Youtube
+        case ['youtube', 'yt'].find((value, index, arr) => command == value):
+            message.delete();
+            message.channel.send('Follow me on Youtube for exclusive Speedpaints and more! https://www.youtube.com/channel/UChXii0Ai8kFyZGP7VIVSGKg');
+            break;
+
     }
 });
 
