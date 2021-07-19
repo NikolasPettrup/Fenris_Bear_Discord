@@ -24,7 +24,7 @@ client.on("ready", () => {
     logAll('Fenris_Bear Discord Bot is now online!');
     client.user.setActivity('everywhere 👀', {
         type: 'STREAMING',
-        url: 'https://www.twitch.tv/thegrizziey'
+        url: 'https://www.twitch.tv/ratback'
     });
 });
 
@@ -50,33 +50,33 @@ client.on("message", function (message) {
         //Commands
         case ['command', 'commands', 'cmd', 'cmds', 'help'].find((value, index, arr) => command === value):
             message.delete();
-            message.channel.send('<@' + message.author + '> These are the commands I can operate: ```!d5 - Sends information about our GTA V RP Server project DestinyV\n!twitter - Sends a link to Grizzley\'s Twitter-Account\n!insta - Sends a link to Grizzley\'s Instagram-Account\n!fiverr - Sends a Link to Grizzley\'s Fiverr-Account\n!twitch - Sends a Link to Grizzley\'s Twitch-Account\n!8ball [Your yes-no-question] - Gives an answer for your question\n!help - Shows this reply\n !grogu - Saves Baby Yoda everytime you use this command \n\nMore commands coming in the future.```');
+            message.channel.send('<@' + message.author + '> These are the commands I can operate: ```!youtube - Sends a link to Ratback\'s Youtube-Account\n !twitter - Sends a link to Ratback\'s Twitter-Account\n!insta - Sends a link to Ratback\'s Instagram-Account\n!fiverr - Sends a Link to Ratback\'s Fiverr-Account\n!twitch - Sends a Link to Ratback\'s Twitch-Account\n!8ball [Your yes-no-question] - Gives an answer for your question\n!help - Shows this reply\n\nMore commands coming in the future.```');
             break;
 
             //Twitter
         case 'twitter':
             message.delete();
-            message.channel.send('It seems like you\'d like to follow Grizzley on Twitter: https://twitter.com/grizzIeylol');
+            message.channel.send('It seems like you\'d like to follow Ratback on Twitter: https://twitter.com/grizzIeylol');
             break;
             //Instagram
         case ['insta', 'instagram', 'ig'].find((value, index, arr) => command === value):
             message.delete();
-            message.channel.send('It seems like you\'d like to follow Grizzley on Instagram: https://instagram.com/grizzIeylol');
+            message.channel.send('It seems like you\'d like to follow Ratback on Instagram: https://instagram.com/grizzIeylol');
             break;
             //Fiverr
         case ['fiverr', 'gig', 'emotes', 'logo', 'emote', 'logos', 'badge', 'badges'].find((value, index, arr) => command === value):
             message.delete();
-            message.channel.send('In need of emotes, badges or a logo for your Twitch, Youtube or Social Media Account? Check out Grizzleys Gigs on Fiverr: https://www.fiverr.com/kenowby');
+            message.channel.send('In need of emotes, badges or a logo for your Twitch, Youtube or Social Media Account? Check out Ratbacks Gigs on Fiverr: https://www.fiverr.com/kenowby');
             break;
             //Twitch
         case 'twitch':
             message.delete();
-            message.channel.send('It seems like you\'d like to watch and follow Grizzley on Twitch: https://twitch.tv/thegrizziey');
+            message.channel.send('It seems like you\'d like to watch and follow Ratback on Twitch: https://twitch.tv/ratback');
             break;
             //Steam
         case 'steam':
             message.delete();
-            message.channel.send('It seems like you\'d like to add Grizzley on Steam: https://steamcommunity.com/id/thegrizziey/');
+            message.channel.send('It seems like you\'d like to add Ratback on Steam: https://steamcommunity.com/id/thegrizziey/');
             break;
             //8 Ball
         case '8ball':
@@ -94,26 +94,12 @@ client.on("message", function (message) {
             }
             break;
 
-            //DestinyV Command
-        case ['destiny', 'dv', 'd5', 'destinyv', 'destiny5'].find((value, index, arr) => command == value):
-            message.delete();
-            message.channel.send('DestinyV is a German GTA V Roleplay server project by Grizzley and two of his friends which currently is in development. Discord-Server: https://discord.gg/URkNCPJeWe');
-            message.channel.send(':flag_de: Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglied der Projektleitung eine DM.');
-            break;
-
             //Join Command.
         case 'join':
             message.delete();
             let member = message.member;
             member.roles.add('787692725490286604').catch(console.error);
             message.author.send('```*clap clap* You\'re now a member of Grizzley\'s Bounty Hunter Guild!```');
-            break;
-
-            //Grogu Counter
-        case 'grogu':
-            message.delete();
-            i++;
-            message.channel.send('<@' + message.author + '> \n Grogu was in trouble again, but you saved him! Baby Yoda was already saved ' + i + ' times by this Discord server!');
             break;
 
         //Youtube
