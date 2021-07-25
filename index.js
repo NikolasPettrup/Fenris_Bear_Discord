@@ -56,12 +56,12 @@ client.on("message", function (message) {
             //Twitter
         case 'twitter':
             message.delete();
-            message.channel.send('It seems like you\'d like to follow Ratback on Twitter: https://twitter.com/grizzIeylol');
+            message.channel.send('It seems like you\'d like to follow Ratback on Twitter: https://twitter.com/ratbackttv');
             break;
             //Instagram
         case ['insta', 'instagram', 'ig'].find((value, index, arr) => command === value):
             message.delete();
-            message.channel.send('It seems like you\'d like to follow Ratback on Instagram: https://instagram.com/grizzIeylol');
+            message.channel.send('It seems like you\'d like to follow Ratback on Instagram: https://instagram.com/ratbackttv');
             break;
             //Fiverr
         case ['fiverr', 'gig', 'emotes', 'logo', 'emote', 'logos', 'badge', 'badges'].find((value, index, arr) => command === value):
@@ -76,7 +76,7 @@ client.on("message", function (message) {
             //Steam
         case 'steam':
             message.delete();
-            message.channel.send('It seems like you\'d like to add Ratback on Steam: https://steamcommunity.com/id/thegrizziey/');
+            message.channel.send('It seems like you\'d like to add Ratback on Steam: https://steamcommunity.com/id/ratback/');
             break;
             //8 Ball
         case '8ball':
@@ -99,7 +99,7 @@ client.on("message", function (message) {
             message.delete();
             let member = message.member;
             member.roles.add('787692725490286604').catch(console.error);
-            message.author.send('```*clap clap* You\'re now a member of Grizzley\'s Bounty Hunter Guild!```');
+            message.author.send('```*clap clap* You\'re now a member of Ratback\'s Bounty Hunter Guild!```');
             break;
 
         //Youtube
