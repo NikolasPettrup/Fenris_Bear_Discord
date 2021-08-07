@@ -82,7 +82,7 @@ client.on("message", function (message) {
         //Steam Group
         case 'steamgroup':
             message.delete();
-            message.channel.send('Feel free to join our Community Steam Group: https://steamcommunity.com/groups/ratbacktwitch');
+            message.channel.send('Feel free to join Ratback\'s Community Steam Group: https://steamcommunity.com/groups/ratbacktwitch');
             break;
 
         //8 Ball
