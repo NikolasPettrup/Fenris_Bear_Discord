@@ -50,35 +50,42 @@ client.on("message", function (message) {
         //Commands
         case ['command', 'commands', 'cmd', 'cmds', 'help'].find((value, index, arr) => command === value):
             message.delete();
-            message.channel.send('<@' + message.author + '> These are the commands I can operate: ```!youtube - Sends a link to Ratback\'s Youtube-Account\n !twitter - Sends a link to Ratback\'s Twitter-Account\n!insta - Sends a link to Ratback\'s Instagram-Account\n!fiverr - Sends a Link to Ratback\'s Fiverr-Account\n!twitch - Sends a Link to Ratback\'s Twitch-Account\n!8ball [Your yes-no-question] - Gives an answer for your question\n!help - Shows this reply\n\nMore commands coming in the future.```');
+            message.channel.send('<@' + message.author + '> These are the commands I can operate: ```!youtube - Sends a link to Ratback\'s Youtube-Account\n !twitter - Sends a link to Ratback\'s Twitter-Account\n!insta - Sends a link to Ratback\'s Instagram-Account\n!steamgroup - Sends a Link to Ratback\'s Community Steam Group\n!fiverr - Sends a Link to Ratback\'s Fiverr-Account\n!twitch - Sends a Link to Ratback\'s Twitch-Account\n!8ball [Your yes-no-question] - Gives an answer for your question\n!help - Shows this reply\n\nMore commands coming in the future.```');
             break;
 
-            //Twitter
+        //Twitter
         case 'twitter':
             message.delete();
             message.channel.send('It seems like you\'d like to follow Ratback on Twitter: https://twitter.com/ratbackttv');
             break;
-            //Instagram
+        //Instagram
         case ['insta', 'instagram', 'ig'].find((value, index, arr) => command === value):
             message.delete();
             message.channel.send('It seems like you\'d like to follow Ratback on Instagram: https://instagram.com/ratbackttv');
             break;
-            //Fiverr
+        //Fiverr
         case ['fiverr', 'gig', 'emotes', 'logo', 'emote', 'logos', 'badge', 'badges'].find((value, index, arr) => command === value):
             message.delete();
             message.channel.send('In need of emotes, badges or a logo for your Twitch, Youtube or Social Media Account? Check out Ratbacks Gigs on Fiverr: https://www.fiverr.com/kenowby');
             break;
-            //Twitch
+        //Twitch
         case 'twitch':
             message.delete();
             message.channel.send('It seems like you\'d like to watch and follow Ratback on Twitch: https://twitch.tv/ratback');
             break;
-            //Steam
+        //Steam
         case 'steam':
             message.delete();
             message.channel.send('It seems like you\'d like to add Ratback on Steam: https://steamcommunity.com/id/ratback/');
             break;
-            //8 Ball
+
+        //Steam Group
+        case 'steamgroup':
+            message.delete();
+            message.channel.send('Feel free to join our Community Steam Group: https://steamcommunity.com/groups/ratbacktwitch');
+            break;
+
+        //8 Ball
         case '8ball':
             const randomMessage = eightball[Math.floor(Math.random() * eightball.length)];
             if (args.length >= 1 && args[0] != '') {
@@ -87,14 +94,15 @@ client.on("message", function (message) {
                 message.channel.send('<@' + message.author + '>```If there is no question, there is no answer.```');
             }
             break;
-            // Poke-Command.
+
+        // Poke-Command.
         case 'poke':
             if (args.length > 0) {
                 message.channel.send('Yo, ' + args[0] + '! *poke* *poke* Lemme poke you! *poke* *poke* @<' + message.author + '> wants me to do dis.');
             }
             break;
 
-            //Join Command.
+        //Join Command.
         case 'join':
             message.delete();
             let member = message.member;
