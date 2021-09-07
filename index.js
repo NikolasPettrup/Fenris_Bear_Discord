@@ -82,7 +82,7 @@ client.on("message", function (message) {
         'Ask again later. I\'m too busy doing bear-god-things right now, u know?',
         'My sources say no. And ya know, Imma bear-god, so it\'s true.',
         'The answer to your question is 42 and the universe.'
-    ];
+    ], x;
 
 
     /**
@@ -208,7 +208,12 @@ client.on("message", function (message) {
          * operates a dice-roll with a dx-dice
          */
         case 'dice':
-            // TO-DO: implement dice-roll function
+            if ( args.length > 0) {
+                let x = args[0];
+                message.channel.send('@<' + message.author + '> hat eine ' + (Math.floor(Math.random() * (x - 1)) + 1) + ' gewürfelt!');
+            } else {
+                message.channel.send('@<' + message.author + '> hat eine ' + (Math.floor(Math.random() * (6 - 1)) + 1) + ' gewürfelt!');
+            }
             break;
     }
 });
